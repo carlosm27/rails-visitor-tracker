@@ -6,7 +6,7 @@
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
 
-        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
         <%= javascript_importmap_tags %>
     </head>
     <h1>Visitor Tracker</h1>
@@ -22,7 +22,7 @@
         <% @trackers.each do |tracker| %>
         <tr>
             <td><%= tracker.ip_address %></td>         
-            <td><%= tracker.request_url %></td><td>     
+            <td><%= tracker.request_url %></td> 
             <td><%= tracker.request_port %></td>
             <td><%= tracker.request_path %></td>
             <td><%= tracker.request_method %></td>
