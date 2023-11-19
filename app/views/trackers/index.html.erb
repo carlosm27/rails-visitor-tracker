@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visitor Tracker</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+        <%= javascript_importmap_tags %>
+    </head>
+    <h1>Visitor Tracker</h1>
+    <table>
+        <tr>
+            <th>IP Address </th>              
+            <th>Request URL </th>                     
+            <th>Request Port </th>  
+            <th>Request Path </th>  
+            <th>Request Method </th>
+            
+        </tr>
+        <% @trackers.each do |tracker| %>
+        <tr>
+            <td><%= tracker.ip_address %></td>         
+            <td><%= tracker.request_url %></td><td>     
+            <td><%= tracker.request_port %></td>
+            <td><%= tracker.request_path %></td>
+            <td><%= tracker.request_method %></td>
+           
+                 
+        </tr>
+        <% end %>
+    </table>
+
+</html>
